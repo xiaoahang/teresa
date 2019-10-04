@@ -41,6 +41,6 @@ p2.greetingFormal()
 # and a boolean option -w to direct some aspect of behaviour
 
 # Help option: good practice to include a boolean help option -h
-# if present, code just prints help message and then quits
+# if present, labCode just prints help message and then quits
 # help message says how to call program, lists options, etc
 
