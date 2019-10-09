@@ -41,3 +41,14 @@ for m in sorted(densities, key=lambda v: densities[v]):
 # lets you supply a custom two arg function for comparing list items
 # should return negative/0/positive value depending on
 # whether first arg is considered smaller than/same as/bigger than second
+
+
+# list , tuples and strings
+## group together multiple elements
+## these are sequence types # 有序
+## but dictionary is NOT an ordered type 字典是无序的
+## 字典的key是唯一的
+## key value maps
+## dictionary is a kind of mapping type
+
+

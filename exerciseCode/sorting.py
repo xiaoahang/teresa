@@ -37,3 +37,51 @@ sorted(x)
 
 sorted(x, key=lambda item: item[1])  # mean that you sort the list by the [1] index in one tuple
 
+# modifying sort behaviour
+## 自定义排序
+# 1. lambda
+## keywords 'key' allows you to supply a function
+## function conoutes some alternative value from item(of list being sorted)
+## items of list then  sorted on basis of these altenative values
+## for 'one-off' funtions, can use lambda funtion
+
+# lambda notation, means f(x) = x*x +1,means input x, output x*x+1
+lambda x: (x * x) + 1
+
+# give item s, computes/returns s[1]
+lambda x: x[1]
+# which only makes sense if either
+## s is a sequence : so s[1] is its 2nd element
+#  or s is a dictionary: so s[1] looks up values for key 1
+
+x = [('a', 3), ('c', 1), ('b', 5)]
+sorted(x)
+
+sorted(x, key=lambda item: item[1])  # mean that you sort the list by the [1] index in one tuple
+# 2. use keyword arg cmp:
+## lets you supply a custom two arg funtion for comparing list items
+## should return negative/0/positive value depending on whether fisrt arg id considered smaller than / same as / bigger than second
+## this is easy for sort based on the order of keys
+tel = {'alf': 111, 'bob': 222, 'cal': 333}
+for k in tel:
+    print(k, ':', tel[k])
+
+for k in sorted(tel):
+    print(k, ':', tel[k])
+
+# eg
+counts = {'a': 3, 'c': 1, 'b': 5}
+labels = list(counts.keys())
+labels.sort(key=lambda v: counts[v])
+sorted(counts.items(), key=lambda i: i[1])
+# eg2
+densities = {
+    'iron': 7.8,
+    'gold': 19.3,
+    'zinc': 7.13,
+    'lead': 11.4
+}
+metals = list(densities.keys())
+metals.sort(reverse=True, key=lambda m: densities[m])
+for i in metals:
+    print('{0:>8} = {1:5.1f}'.format(i, densities[i]))
