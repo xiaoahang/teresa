@@ -31,7 +31,7 @@ outfile.close()
 
 # filestreams often handled using with ... as ... construct
 # executes open command and assigns to var
-# filestram automatically closes when labCode block exits
+# filestram automatically closes when lab_code block exits
 
 with open(sys.argv[1], 'r') as infile:
     num = 0
